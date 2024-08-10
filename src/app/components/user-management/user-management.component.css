@@ -1,0 +1,39 @@
+.user-management-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #51218b;
+  }
+  
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: 10px; 
+  }
+
+  table {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  
+  .mat-paginator {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 20px auto 0; 
+  }
+  
+  .status-active {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status-inactive {
+    color: red;
+    font-weight: bold;
+  }

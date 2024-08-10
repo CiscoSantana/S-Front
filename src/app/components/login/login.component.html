@@ -1,0 +1,21 @@
+<div class="login-container">
+    <div class="login-box">
+        <h2>Login</h2>
+        <p>Digite os seus dados de acesso no campo abaixo.</p>
+        <form (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="username">Nome do usuário</label>
+            <input id="username" name="username" type="text" [(ngModel)]="credentials.username" placeholder="Digite seu user name" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="password" [(ngModel)]="credentials.password" placeholder="Digite sua senha" required />
+        </div>        
+        <button type="submit" class="login-button">Acessar</button>
+        </form>
+    </div>
+</div>
+
+
+  
+  

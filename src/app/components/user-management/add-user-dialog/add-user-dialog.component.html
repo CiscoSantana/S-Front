@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{ isViewMode ? 'Visualizar Usuário' : isEditMode ? 'Editar Usuário' : 'Adicionar Usuário' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="addUserForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="login" placeholder="Nome do usuário">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Email do usuário">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Senha</mat-label>
+      <input matInput 
+             type="password" 
+             formControlName="passwd" 
+             placeholder="Senha"
+             [required]="!isEditMode">
+    </mat-form-field>
+
+    <mat-checkbox formControlName="isEnabled" [disabled]="isViewMode">Ativo</mat-checkbox>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">{{isViewMode ? 'Fechar' : 'Cancelar'}}</button>
+  <button mat-raised-button color="primary" *ngIf="!isViewMode" (click)="onSave()">
+    {{ isEditMode ? 'Salvar Alterações' : 'Adicionar' }}
+  </button>
+</mat-dialog-actions>

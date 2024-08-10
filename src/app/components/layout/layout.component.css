@@ -1,0 +1,30 @@
+
+  
+   .head {
+    background-color: #4050B5 ;
+  }
+  .head span{
+    color: #FFF;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4050B5 ;
+  }
+
+  .footer span{
+    color: #FFF;
+  }
+  
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
